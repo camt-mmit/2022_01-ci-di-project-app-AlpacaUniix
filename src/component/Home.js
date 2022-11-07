@@ -1,14 +1,29 @@
 import React from "react";
-import { BsKeyFill } from 'react-icons/Bs';
-import { HiUsers } from 'react-icons/Hi';
-import { MdLibraryBooks } from 'react-icons/Md';
+import { ButtonGroup, Button, InputGroup, Form } from 'react-bootstrap';
+import { BsFillKeyFill } from 'react-icons/bs';
+import { HiUsers } from 'react-icons/hi';
+import { MdLibraryBooks } from 'react-icons/md';
 
-export default function (ButtonGetToken){
-    return(
+export default function Home() {
+    return (
         <>
-        <Button variant="contained"> <BsKeyFill></BsKeyFill> Access Token</Button>
-        <Button variant="contained"> <HiUsers></HiUsers> Users</Button>
-        <Button variant="contained"> <MdLibraryBooks></MdLibraryBooks> Books</Button>
+            <div className="d-flex justify-content-center" style={{ marginTop: 25 }}>
+                <ButtonGroup className="mb-7">
+                    <Button> <BsFillKeyFill /> Access Token</Button>
+                    <Button> <HiUsers /> Users</Button>
+                    <Button> <MdLibraryBooks /> Books</Button>
+                </ButtonGroup>
+            </div>
+            <div className="d-flex justify-content-center" style={{ marginTop: 25}}>
+                <InputGroup className="mb-3" style={{ width: "20%" }}>
+                    <InputGroup.Text><BsFillKeyFill /></InputGroup.Text>
+                    <Form.Control
+                        id="inlineFormInputGroup"
+                        placeholder="Access Token"
+                        aria-label="Token"
+                    />
+                </InputGroup>
+            </div>
         </>
     )
 }
